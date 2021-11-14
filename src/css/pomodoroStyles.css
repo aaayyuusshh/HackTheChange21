@@ -1,8 +1,85 @@
-body{
-    font-family: "Poppins", sans-serif;
-    min-height: 100vh;
-    background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#63dbeb));
-    background: linear-gradient(to right top, #65dfc9, #63dbeb);
-    display: -webkit-box;
-    display: -ms-flexbox;
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#63dbeb));
+  background: linear-gradient(to right top, #65dfc9, #63dbeb);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
+h1 {
+  text-align: center;
+  color: red;
+  opacity: 0.5;
+}
+
+.container-time {
+  width: 20rem;
+  height: 20rem;
+  border: 5px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-control {
+  margin-top: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-control #play-button {
+  font-size: large;
+  border: 2px;
+  background: none;
+  border-style: solid;
+  border-color: transparent;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.container-control #play-button:hover {
+  color: #fff;
+  border: 2px;
+  background: none;
+  border-style: solid;
+  border-color: #fff;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+/*# sourceMappingURL=pomodoroStyles.css.map */
