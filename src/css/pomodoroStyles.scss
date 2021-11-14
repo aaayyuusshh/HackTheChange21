@@ -59,13 +59,13 @@ h1{
 .container-control{
   margin-top:0em;
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
   justify-content:center;
   align-items: center;
 }
-
-.container-control #play-button{
+#play-button{ 
   font-size:x-large;
+  text-decoration:none;
   color:#658ec6;
   border: 2px;
   background:none;
@@ -74,14 +74,38 @@ h1{
   padding:1rem;
   border-radius:2rem;
 }
-.container-control #play-button:hover{
+#restart-button{
+  font-size:x-large;
+  text-align: center;
+  width: 1.5rem;
+  text-decoration:none;
+  color:#658ec6;
+  border: 2px;
+  background:none;
+  border-style: solid;
+  border-color:transparent;
+  padding:1rem;
+  border-radius:2rem;
+}
+#play-button:hover{
   color: #fff;
   border: 2px;
   background:none;
   border-style: solid;
+  border-radius:2rem;
   border-color:#fff;
   transition:0.3s ease;
 }
+#restart-button:hover{
+  color: #fff;
+  border: 2px;
+  background:none;
+  border-style: solid;
+  border-radius:2rem;
+  border-color:#fff;
+  transition:0.3s ease;
+}
+
 
 #finished {
   margin-top:1rem;
