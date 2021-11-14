@@ -105,6 +105,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   padding: 1.2em;
+  width: 140px;
 }
 
 .redirect h2 {

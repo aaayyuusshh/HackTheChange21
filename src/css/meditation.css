@@ -9,6 +9,17 @@
   transition: 0.2ms;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
 .app {
   z-index: 1;
   height: 70vh;
@@ -34,6 +45,8 @@
 }
 
 .bigApp {
+  width: 100%;
+  max-width: 1000px;
   position: relative;
   height: 80vh;
   -webkit-box-pack: center;
@@ -116,7 +129,7 @@ video {
   position: fixed;
   top: 0%;
   left: 0%;
-  height: 100vh;
+  min-height: 100vh;
   z-index: -1;
 }
 
@@ -206,6 +219,10 @@ button:active,
 }
 
 @media all and (max-width: 758px) {
+  .title {
+    font-size: 40px;
+    top: 50px;
+  }
   .app,
   .bigApp {
     -webkit-box-orient: vertical;
@@ -235,6 +252,10 @@ button:active,
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .time-select {
+    position: relative;
+    top: 50px;
   }
   .track-outline,
   .moving-outline {
