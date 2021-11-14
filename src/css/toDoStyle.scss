@@ -53,7 +53,10 @@ body {
     padding: 0em 3em 3em 1em;
 
     font-size:0.9em;
+
+    border-radius: 20px;
  
+
 }
 
 .task-list {
@@ -157,6 +160,10 @@ form {
   
   left: 55%;
    top: 20%;
+
+   border-radius: 20px;
+   
+  
 }
 
 .todo-header {
@@ -168,6 +175,11 @@ form {
 
   background: linear-gradient(to left top, 
   rgba(131, 140, 150, 0.481),  rgba(131, 140, 150, 0.056));
+
+ 
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  
 
 
 }
@@ -284,5 +296,3 @@ form {
   --clr-dark: #333;
   --clr-warning: rgb(99, 36, 36);
 }
-
-
