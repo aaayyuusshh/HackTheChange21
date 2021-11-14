@@ -27,8 +27,19 @@ main {
   border-radius: 20px;
   z-index: 1;
   backdrop-filter: blur(2em);
-
+  opacity: 0.9;
   display: flex;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: 1;
 }
 
 .obj1,
@@ -93,6 +104,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 1.2em;
+  width: 140px;
 
   h2 {
     display: block;
@@ -133,16 +145,20 @@ main {
 
 h1 {
   color: #32469ea6;
+  //color: white;
   font-weight: 600;
   font-size: 3rem;
   opacity: 0.5;
+  //text-shadow: #2f3c4b 0px 0px 10px;
 }
 
 h2 {
   color: #658ec6;
+  color: white;
   font-weight: 400;
   font-size: 1.2em;
   opacity: 0.8;
+  text-shadow: #2f3c4b 0px 0px 10px;
 }
 
 p {
