@@ -45,6 +45,7 @@ body {
   background: linear-gradient(to right bottom, white, rgba(255, 255, 255, 0.2));
   padding: 0em 3em 3em 1em;
   font-size: 0.9em;
+  border-radius: 20px;
 }
 
 .task-list {
@@ -172,6 +173,7 @@ form {
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
   left: 55%;
   top: 20%;
+  border-radius: 20px;
 }
 
 .todo-header {
@@ -188,6 +190,8 @@ form {
           justify-content: space-between;
   background: -webkit-gradient(linear, right bottom, left top, from(rgba(131, 140, 150, 0.481)), to(rgba(131, 140, 150, 0.056)));
   background: linear-gradient(to left top, rgba(131, 140, 150, 0.481), rgba(131, 140, 150, 0.056));
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .list-title {
