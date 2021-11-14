@@ -1,292 +1,288 @@
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
+  font-family: inherit;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(to right top, #65dfc9, #63dbeb);
-  height: 100vh;
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+
+  display: grid;
+  grid:
+    "header header header header" auto
+    "...... lists  active ......" auto /
+    1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+
+   background: linear-gradient(to right top, #65dfc9, #63dbeb);
+    height:100vh;
 }
 
-h1 {
+.title {
+  grid-area: header;
   text-align: center;
+  font-size: 3.5em;
   font-weight: 900;
-  font-size: 4em;
+  color: rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  margin: 0.2em 0 0.5em;
+
   color: rgb(255, 255, 255);
-  letter-spacing: 4px;
-
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.33);
+  max-height:100px;
+
+  position: relative;
+
 }
 
-.main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 5em;
-  color: rgba(0, 0, 0, 0.705);
+.all-tasks {
+  grid-area: lists;
+  position:absolute; 
+  top:22%;
+  left:22%;
+  color: rgba(0, 0, 0, 0.645);
 
-  .all-tasks {
-    display: flex;
-    flex-direction: column;
+  background: linear-gradient(to right bottom, 
+    rgba(255,255,255, 1), rgba(255,255,255,0.2));
 
-    //justify-content: center;
+    padding: 0em 3em 3em 1em;
 
-    background: linear-gradient(
-      to right bottom,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.2)
-    );
-
-    height: 18em;
-    padding: 1em 10em 0em 1.5em; //top, right, bottom, left
-    padding-right: 10em;
-    padding-left: 2em;
-    margin-top: 2em;
-
-    h2 {
-      margin-bottom: 0.5em;
-    }
-    ul {
-      line-height: 1.5em;
-      padding-left: 1em;
-      margin-top: 0.5em;
-      list-style-type: circle;
-      font-size: 0.9em;
-    }
-
-    form {
-      margin-top: 3em;
-    }
-
-    li {
-      cursor: pointer;
-    }
-
-    li:hover {
-      opacity: 0.8;
-    }
-  }
-
-  //everything i do to right element transfers to the left, why??
-  .todo-list {
-    .todo-header {
-      padding-bottom: 3em;
-      background: linear-gradient(
-        to left top,
-        rgba(131, 140, 150, 0.481),
-        rgba(131, 140, 150, 0.056)
-      );
-
-      padding: 2em 13em 1.5em 1.5em;
-
-      position: relative;
-    }
-
-    .list-title {
-      margin-right: 1.5em;
-      font-size: 2em;
-      display: inline;
-    }
-
-    .task-count {
-      font-size: 0.8em;
-      display: inline;
-      position: absolute;
-      top: 45%;
-      left: 70%;
-    }
-
-    .tasks {
-      padding-bottom: 0.6em;
-
-      .round-checkbox {
-        // width: 1.3em;
-        // height: 1.3em;
-        // background-color: white;
-        // border-radius: 50%;
-        // vertical-align: middle;
-        // border: 1px solid rgba(7, 7, 7, 0.315);
-        // appearance: none;
-        // outline: none;
-        // cursor: pointer;
-        transform: scale (1);
-        transition: transform 0.3s ease-in;
-
-        display: inline-block;
-        width: 0.75em;
-        height: 0.75em;
-        margin-right: 0.75em;
-        margin-top: 0.3em;
-        cursor: pointer;
-        border: 2px solid currentColor;
-        border-radius: 50%;
-      }
-
-      [type="checkbox"] {
-        opacity: 0;
-        position: absolute;
-      }
-
-      .task:hover .round-checkbox {
-        transform: scale(1.25);
-        color: rgba(58, 188, 202, 0.494);
-      }
-
-      [type="checkbox"]:checked + label .round-checkbox {
-        background: rgba(58, 188, 202, 0.494);
-        border: rgba(58, 188, 202, 0.494);
-
-        box-shadow: 1px 1px 2px black;
-      }
-
-      [type="checkbox"]:checked + label {
-        opacity: 0.4;
-      }
-
-      //crossing elements
-      .task label::after {
-        content: "";
-        position: absolute;
-        left: 2em;
-        right: 0;
-        bottom: 55%;
-        height: 2px;
-        background: black;
-        transform: scaleX(0);
-        transition: transform 0.2s ease-in;
-      }
-
-      [type="checkbox"]:checked + label::after {
-        transform: scaleX(1);
-      }
-
-      label {
-        padding-left: 0.5em;
-        position: relative;
-        padding-bottom: 0.3em;
-        display: inline-flex;
-      }
-
-      //normal divider
-      .task::after {
-        content: "";
-        position: absolute;
-
-        right: 0;
-        left: 0;
-        top: 60%;
-        height: 2px;
-        width: 23.2em;
-        background: rgba(0, 0, 0, 0.055);
-        //box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.26);
-      }
-
-      .task {
-        padding-bottom: 2em;
-        position: relative;
-      }
-    }
-
-    .todo-body {
-      padding: 2em 13em 2em 1em;
-    }
-
-    background: linear-gradient(
-      to right bottom,
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.3)
-    );
-  }
+    font-size:0.9em;
+ 
 }
 
-/*----------------*/
-
-.active {
-  font-weight: 700;
+.task-list {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  list-style: circle;
+  padding-left: 1.1em;
 }
 
-.new {
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid black;
+.list-name {
+  cursor: pointer;
+}
 
-  font-size: inherit;
-  outline: none;
-
-  transition: border-bottom 0.1s ease-in;
-
-  order: 2;
+.list-name:hover {
+  opacity: 0.7;
 }
 
 form {
   display: flex;
 }
 
+.btn {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.btn.create {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 0.25em;
+  transition: opacity 250ms ease-in;
+}
+
+.btn.create:hover {
+  opacity: 0.7;
+}
+
+.btn.delete {
+  opacity: 0.7;
+  font-size: 1rem;
+  transition: color 200ms;
+}
+
+.btn.delete:hover {
+
+    color: hsla(0, 100%, 50%, 0.7);
+  
+}
+
+.new {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+  padding: 0.25em;
+
+  transition: border-bottom 150ms ease-in;
+  order: 2;
+}
+
 .new::placeholder {
-  color: rgba(75, 70, 70, 0.398);
-}
-
-.new:focus {
-  border-bottom: 2px solid black;
-}
-
-.new:focus::placeholder {
   opacity: 0.4;
 }
 
-.new.list {
-  font-size: 0.8em;
+
+.new:focus {
+  border-bottom-width: 3px;
 }
 
-.btn {
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  //color: inherit;
+.new:focus::placeholder {
+  opacity: 0.15;
+}
+
+.new.list {
+  font-size: 1.1rem;
+}
+
+.new.task {
+  margin-bottom: 0;
+}
+
+.active-list {
+  font-weight: 700;
+}
+
+.todo-list {
+  --spacer: 2rem;
+
+  grid-area: active;
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  position:absolute; 
+
+  background: linear-gradient(to right bottom, 
+  rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+  
+  left: 55%;
+   top: 20%;
+}
+
+.todo-header {
+  padding: var(--spacer);
+  background: #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(to left top, 
+  rgba(131, 140, 150, 0.481),  rgba(131, 140, 150, 0.056));
+
+
+}
+
+.list-title {
+  margin: 0 1em 0 0;
+}
+
+.task-count {
+  margin: 0;
   font-size: 1rem;
 }
 
-.btn.list,
-.btn.task {
-  font-size: 1.4em;
-  font-weight: bold;
-  margin-right: 0.5em;
-
-  transition: 0.5s ease-in;
-}
-
-.btn.task:hover {
-  opacity: 0.6;
-}
-
-.btn.list:hover {
-  color: white;
-}
-
 .todo-body {
+  padding: var(--spacer);
   position: relative;
 }
 
-.delete-stuff {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  position: absolute;
-  left: 1%;
-  top: 105%;
-
-  .btn {
-    color: rgba(255, 255, 255, 0.7);
-    letter-spacing: 0.05em;
-  }
-
-  .btn:hover {
-    color: hsla(0, 100%, 50%, 0.446);
-  }
+.new-task-creator .create {
+  color: var(--clr-primary);
 }
 
-/* glass design */
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.task label {
+  display: flex-inline;
+  align-items: center;
+  position: relative;
+}
+
+.task {
+  position: relative;
+  margin-bottom: 1.25em;
+}
+
+.task::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -0.5em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.1;
+}
+
+.custom-checkbox {
+  --size: 0.75em;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  margin-right: var(--size);
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+
+.task:hover .custom-checkbox,
+[type="checkbox"]:focus + label .custom-checkbox {
+  transform: scale(1.2);
+  color: var(--clr-primary);
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  box-shadow: inset 0 0 0px 2px white;
+}
+
+[type="checkbox"]:checked + label {
+  opacity: 0.5;
+}
+
+.task label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  left: 1.5em;
+  top: 50%;
+  height: 3px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 150ms ease-in-out;
+}
+
+[type="checkbox"]:checked + label::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.delete-stuff {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -35px;
+  color: var(--clr-light);
+
+  color: rgba(102, 93, 93, 0.741);
+  letter-spacing:0.05em;
+}
+
+:root {
+  --clr-primary: rgb(54, 112, 199);
+  --clr-light: #f4f4f4;
+  --clr-dark: #333;
+  --clr-warning: rgb(99, 36, 36);
+}
+
+
