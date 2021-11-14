@@ -1,15 +1,13 @@
-var minutes = parseInt(window.prompt("Please enter the amount of minutes you would like to study today: "));
+var minutes = 30;
 var seconds = "00";
 var minutesInterval;
-var breaks = parseInt(window.prompt("Please enter the amount of minutes you would like your breaks to be: "));
+var breaks = 5;
 var countStudy = 0;
 var countBreak = 0;
 var breakTime = false;
 var notify = new Audio("/src/js/breakTime.mp3");
 
 function init(){
-    minutes = (minutes < 25 || minutes != typeof(Number)) ? 25 : minutes;
-    breaks = (breaks < 5 || breaks != typeof(Number)) ? 5 : breaks;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
 }
@@ -26,6 +24,8 @@ function startTime(){
     seconds = 59;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("finished").innerHTML = `Time started! It's time to work for the next 25 minutes.`;
+    document.getElementById("finished").classList.add("finishMessage");
 
     minutesInterval = setInterval(minutesElapsed, 60000);
     var secondsInterval = setInterval(secondsElapsed, 1000);
@@ -40,21 +40,18 @@ function startTime(){
             countStudy+=1;
         }
 
-        if((countStudy > 0) && (countStudy % 2) === 0){
+        if(countStudy === 25){
             if(breakTime === false){
                 breakTime = true;
                 notify.play();
-                document.getElementById("finished").innerHTML = `Break time! It's time to de-stress for the next ${breaks} minutes.`;
+                document.getElementById("finished").innerHTML = `Break time! It's time to de-stress for the next 5 minutes.`;
                 document.getElementById("finished").classList.add("finishMessage");
             }
         }
     
-        if((countBreak > 0) && (countBreak % breaks) === 0){
+        if(countBreak === 5){
             if(breakTime === true){
                 breakTime = false;
-                notify.play();
-                document.getElementById("finished").innerHTML = "Break time over! Time to get back to work.";
-                document.getElementById("finished").classList.add("finishMessage");
             }
         }
     }
@@ -67,7 +64,7 @@ function startTime(){
                 notify.play();
                 clearInterval(minutesInterval);
                 clearInterval(secondsInterval);
-                document.getElementById("finished").innerHTML = "Session complete! You have finished your work for the day!";
+                document.getElementById("finished").innerHTML = "Session complete! Click the restart button to start another cycle.";
                 document.getElementById("finished").classList.add("finishMessage");
 
             }
