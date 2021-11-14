@@ -18,6 +18,11 @@ body {
           align-items: center;
 }
 
+h4 {
+  color: white;
+  text-shadow: #2f3c4b 0px 0px 10px;
+}
+
 .glass {
   background-color: white;
   min-height: 80vh;
@@ -43,8 +48,10 @@ body {
 
 h1 {
   text-align: center;
-  color: red;
+  font-size: 35px;
+  color: white;
   opacity: 0.5;
+  text-shadow: #2f3c4b 0px 0px 10px;
 }
 
 .container-time {
@@ -105,6 +112,9 @@ h1 {
 }
 
 #play-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: x-large;
   text-decoration: none;
   color: #658ec6;
@@ -114,12 +124,28 @@ h1 {
   border-color: transparent;
   padding: 1rem;
   border-radius: 2rem;
+  margin-right: 20px;
+  -webkit-box-shadow: #2f3c4b 0px 0px 10px;
+          box-shadow: #2f3c4b 0px 0px 10px;
+  border-style: solid;
+  border-radius: 2rem;
+  border-color: #fff;
+  height: 60px;
+  width: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #restart-button {
   font-size: x-large;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
-  width: 1.5rem;
   text-decoration: none;
   color: #658ec6;
   border: 2px;
@@ -128,6 +154,30 @@ h1 {
   border-color: transparent;
   padding: 1rem;
   border-radius: 2rem;
+  -webkit-box-shadow: #2f3c4b 0px 0px 10px;
+          box-shadow: #2f3c4b 0px 0px 10px;
+  border-style: solid;
+  border-radius: 2rem;
+  border-color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#restart-button:hover,
+#play-button:hover {
+  color: white;
+  -webkit-box-shadow: 0px 0px 30px;
+          box-shadow: 0px 0px 30px;
+  border: none;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 1;
 }
 
 #play-button:hover {

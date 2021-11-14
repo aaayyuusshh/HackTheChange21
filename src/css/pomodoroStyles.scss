@@ -1,20 +1,34 @@
-body{
+body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#63dbeb));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    from(#65dfc9),
+    to(#63dbeb)
+  );
   background: linear-gradient(to right top, #65dfc9, #63dbeb);
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
-.glass{
+h4 {
+  color: white;
+  text-shadow: #2f3c4b 0px 0px 10px;
+}
+
+.glass {
   background-color: white;
   min-height: 80vh;
   width: 60%;
-  background: linear-gradient(to right bottom, 
-  rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
 
   border: 1px solid white;
   border-radius: 20px;
@@ -23,100 +37,130 @@ body{
 
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
 }
 
-h1{
-  text-align:center;
-  color: red;
+h1 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
   opacity: 0.5;
+  text-shadow: #2f3c4b 0px 0px 10px;
 }
 
 .container-time {
   width: 20rem;
   height: 20rem;
   border: 5px;
-  border-style:solid;
-  border-color:rgba(0, 0, 0, 0.6);
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.6);
   border-radius: 10rem;
-  color:rgba(0, 0, 0, 0.6);
-  display:flex;
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
   //justify-self:center;
-  align-self:center;
-  flex-direction:column;
-  justify-content:center;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.time{
+.time {
   font-size: xx-large;
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.container-control{
-  margin-top:0em;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
+.container-control {
+  margin-top: 0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
-#play-button{ 
-  font-size:x-large;
-  text-decoration:none;
-  color:#658ec6;
+#play-button {
+  display: flex;
+  font-size: x-large;
+  text-decoration: none;
+  color: #658ec6;
   border: 2px;
-  background:none;
+  background: none;
   border-style: solid;
-  border-color:transparent;
-  padding:1rem;
-  border-radius:2rem;
+  border-color: transparent;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-right: 20px;
+  box-shadow: #2f3c4b 0px 0px 10px;
+  border-style: solid;
+  border-radius: 2rem;
+  border-color: #fff;
+  height: 60px;
+  width: 60px;
+  align-items: center;
+  justify-content: center;
 }
-#restart-button{
-  font-size:x-large;
+#restart-button {
+  font-size: x-large;
+  display: flex;
   text-align: center;
+  text-decoration: none;
+  color: #658ec6;
+  border: 2px;
+  background: none;
+  border-style: solid;
+  border-color: transparent;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: #2f3c4b 0px 0px 10px;
+  border-style: solid;
+  border-radius: 2rem;
+  border-color: #fff;
   width: 1.5rem;
-  text-decoration:none;
-  color:#658ec6;
-  border: 2px;
-  background:none;
-  border-style: solid;
-  border-color:transparent;
-  padding:1rem;
-  border-radius:2rem;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
-#play-button:hover{
-  color: #fff;
-  border: 2px;
-  background:none;
-  border-style: solid;
-  border-radius:2rem;
-  border-color:#fff;
-  transition:0.3s ease;
-}
-#restart-button:hover{
-  color: #fff;
-  border: 2px;
-  background:none;
-  border-style: solid;
-  border-radius:2rem;
-  border-color:#fff;
-  transition:0.3s ease;
+#restart-button:hover,
+#play-button:hover {
+  color: white;
+  box-shadow: 0px 0px 30px;
+  //border: 1px solid white;
+  border: none;
+  //border-radius: 20px;
+  transform: scale(1.05);
+  opacity: 1;
 }
 
+#play-button:hover {
+  color: #fff;
+  border: 2px;
+  background: none;
+  border-style: solid;
+  border-radius: 2rem;
+  border-color: #fff;
+  transition: 0.3s ease;
+}
+#restart-button:hover {
+  color: #fff;
+  border: 2px;
+  background: none;
+  border-style: solid;
+  border-radius: 2rem;
+  border-color: #fff;
+  transition: 0.3s ease;
+}
 
 #finished {
-  margin-top:1rem;
-  margin-bottom:1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 .finishMessage {
-  display:block;
+  display: block;
   padding: 1rem 0;
-  color:rgba(0, 0, 0, 0.6);
-  background:none;
-  transition:0.5s ease;
+  color: rgba(0, 0, 0, 0.6);
+  background: none;
+  transition: 0.5s ease;
 }
