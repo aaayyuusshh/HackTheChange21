@@ -1,0 +1,98 @@
+body{
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#63dbeb));
+  background: linear-gradient(to right top, #65dfc9, #63dbeb);
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.glass{
+  background-color: white;
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(to right bottom, 
+  rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+
+  border: 1px solid white;
+  border-radius: 20px;
+  z-index: 1;
+  backdrop-filter: blur(2em);
+
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+h1{
+  text-align:center;
+  color: red;
+  opacity: 0.5;
+}
+
+.container-time {
+  width: 20rem;
+  height: 20rem;
+  border: 5px;
+  border-style:solid;
+  border-color:rgba(0, 0, 0, 0.6);
+  border-radius: 10rem;
+  color:rgba(0, 0, 0, 0.6);
+  display:flex;
+  //justify-self:center;
+  align-self:center;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+}
+
+.time{
+  font-size: xx-large;
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container-control{
+  margin-top:0em;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+}
+
+.container-control #play-button{
+  font-size:x-large;
+  color:#658ec6;
+  border: 2px;
+  background:none;
+  border-style: solid;
+  border-color:transparent;
+  padding:1rem;
+  border-radius:2rem;
+}
+.container-control #play-button:hover{
+  color: #fff;
+  border: 2px;
+  background:none;
+  border-style: solid;
+  border-color:#fff;
+  transition:0.3s ease;
+}
+
+#finished {
+  margin-top:1rem;
+  margin-bottom:1rem;
+  text-align: center;
+}
+
+.finishMessage {
+  display:block;
+  padding: 1rem 0;
+  color:rgba(0, 0, 0, 0.6);
+  background:none;
+  transition:0.5s ease;
+}

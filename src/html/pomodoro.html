@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'>
+    <link rel="stylesheet" href="/src/css/pomodoroStyles.css">
+    <title>Pomodoro Session</title>
+</head>
+<body onload = "init()">
+    <div class = glass>
+        <h1>Pomodoro Session</h1>
+        <!-- Timer block -->
+        <div class = "container-time">
+            <div class = time>
+                <div id = "min">
+                    <h4 id = "minutes"></h4>
+                </div>
+                <div id = "col">
+                    <h4 id = "colon">:</h4>
+                </div>
+                <div id = "sec">
+                    <h4 id = "seconds"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div id = "finished"></div>
+
+        <!-- Control Center-->
+        <div class = "container-control" >
+            <button id = "play-button" type = "button" onclick="startTime()">&#9658;</button>
+        </div>
+    </div>
+    <script src = "/src/js/pomodoroScript.js"></script>
+</body>
+</html>
