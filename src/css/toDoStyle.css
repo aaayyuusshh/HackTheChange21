@@ -268,7 +268,8 @@ form {
   font-size: 1rem;
 }
 
-.btn.list, .btn.task {
+.btn.list,
+.btn.task {
   font-size: 1.4em;
   font-weight: bold;
   margin-right: 0.5em;
