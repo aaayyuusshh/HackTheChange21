@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Nanum Gothic", sans-serif;
+  -webkit-transition: 0.2ms;
+  transition: 0.2ms;
 }
 
 .app {
@@ -48,6 +50,7 @@
 }
 
 .header2 {
+  font-family: "Nanum Gohthic", "sans-serif";
   -ms-flex-item-align: start;
       align-self: flex-start;
   position: relative;
@@ -119,8 +122,9 @@ video {
 
 .time-select button,
 .sound-picker button {
-  width: 30%;
-  height: 10%;
+  text-shadow: #2f3c4b 0px 0px 10px;
+  width: 6em;
+  height: 2.5em;
   background: none;
   border-radius: 20px;
   border: 2px solid white;
@@ -148,6 +152,7 @@ button:hover,
   border: none;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  opacity: 1;
 }
 
 button:active,
@@ -158,18 +163,27 @@ button:active,
 
 .sound-picker button {
   border: none;
-  height: 120px;
-  width: 120px;
+  height: 110px;
+  width: 110px;
   border-radius: 20px;
   padding: 30px;
+  -webkit-box-shadow: #2f3c4b 0px 10px 10px;
+          box-shadow: #2f3c4b 0px 10px 10px;
 }
 
 .sound-picker button:nth-child(1) {
-  background: #4972a1;
+  background: #e7a15b;
+  opacity: 0.8;
 }
 
 .sound-picker button:nth-child(2) {
-  background: #a14f49;
+  background: #93dfdd;
+  opacity: 0.8;
+}
+
+.sound-picker button:nth-child(3) {
+  background: #83cf83;
+  opacity: 0.8;
 }
 
 .sound-picker button img {
@@ -189,5 +203,54 @@ button:active,
           justify-content: center;
   color: white;
   text-shadow: #2f3c4b 0px 10px 10px;
+}
+
+@media all and (max-width: 758px) {
+  .app,
+  .bigApp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px;
+  }
+  .time-select,
+  .sound-picker,
+  .player-container {
+    height: 100%;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .track-outline,
+  .moving-outline {
+    width: 500px;
+    height: 500px;
+  }
+  .play {
+    height: 30px;
+    width: 30px;
+  }
+  .time-display {
+    position: absolute;
+    bottom: 0%;
+    color: white;
+    font-size: 30px;
+    text-shadow: #2f3c4b 0px 10px 10px;
+  }
 }
 /*# sourceMappingURL=meditation.css.map */
