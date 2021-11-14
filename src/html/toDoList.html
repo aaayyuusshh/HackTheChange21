@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+   <link rel="stylesheet" href="/src/css/toDoStyle.css">
+
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+    </style>  
+
+    <script defer src="/src/js/script.js"></script>
+    
+
+</head>
+<body>
+
+    <h1>Today's To-do List</h1>
+
+    <div class="main">
+        <!-- left portion -->
+        <div class="all-tasks">
+            <h2 class="task-list-title">Active Lists</h2>
+            <ul class="task-list">
+                <li class="active"> Amazon</li>
+                <li> Google</li>
+                <li>Microsoft</li>
+            </ul>
+
+            <form action="">
+                <input type="text" placeholder="new list name" class= "new list">
+                <button class= "btn list">+</button>
+            </form>
+        </div>
+
+        <div class="todo-list">
+            <div class="todo-header">
+                <h2 class="list-title">Amazon</h2>
+                <p class="task-count">x tasks remaining</p>
+            </div>
+
+            <div class="todo-body">
+
+                <div class="tasks">
+                    <!-- task 1 -->
+                    <div class="task">
+                        <input type="checkbox" id="task-1">
+                        <label for="task-1"><span class="round-checkbox"></span> Finish To-do List</label>
+                    </div>
+
+                    <!-- task 2 -->
+                    <div class="task">
+                        <input type="checkbox" id="task-2">
+                        <label for="task-2"> <span class="round-checkbox"></span> Workout</label>
+                    </div>
+
+                    <!-- task 3 -->
+                    <div class="task">
+                        <input type="checkbox" id="task-3">
+                        <label for="task-3"> <span class="round-checkbox"></span> Do something</label>
+                    </div>
+                </div>
+
+                <div class="new-task-creator">
+                    <form action="">
+                        <input type="text" placeholder="enter new task" class= "new task"> 
+                        <button class="btn task">+</button>
+                    </form>
+                </div>
+
+                <div class="delete-stuff">
+                    <button class= "btn delete"> clear completed tasks</button>
+                    <button class= "btn delete"> delete list</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+</html>
