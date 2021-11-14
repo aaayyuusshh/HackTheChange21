@@ -92,10 +92,10 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -104,8 +104,9 @@ h1 {
           align-items: center;
 }
 
-.container-control #play-button {
+#play-button {
   font-size: x-large;
+  text-decoration: none;
   color: #658ec6;
   border: 2px;
   background: none;
@@ -115,11 +116,37 @@ h1 {
   border-radius: 2rem;
 }
 
-.container-control #play-button:hover {
+#restart-button {
+  font-size: x-large;
+  text-align: center;
+  width: 1.5rem;
+  text-decoration: none;
+  color: #658ec6;
+  border: 2px;
+  background: none;
+  border-style: solid;
+  border-color: transparent;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+#play-button:hover {
   color: #fff;
   border: 2px;
   background: none;
   border-style: solid;
+  border-radius: 2rem;
+  border-color: #fff;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#restart-button:hover {
+  color: #fff;
+  border: 2px;
+  background: none;
+  border-style: solid;
+  border-radius: 2rem;
   border-color: #fff;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
