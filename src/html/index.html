@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="/src/css/style.css">
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-    </style>
+    </style> 
 </head>
 <body>
-    <h1 class="title">Stuff I need to do</h1>
+
+    <video src="../video/BackgroundVid.mp4" muted loop autoplay></video> 
+
+    <main>
+        <section class="glass">
+            
+            <div class="dashboard">
 
     <div class="all-tasks">
       <h2 class="task-list-title">My lists</h2>
@@ -28,34 +34,38 @@
       </form>
     </div>
 
-    <div class="todo-list" data-list-display-container>
-      <div class="todo-header">
-        <h2 class="list-title" data-list-title>YouTube</h2>
-        <p class="task-count" data-list-count>3 tasks remaining</p>
-      </div>
+                    <a href="./meditation.html" class="redirect meditation">
+                        <img src="/images/to-do.png" alt="">
+                        <h2>To-do List</h2>
+                    </a>
 
-      <div class="todo-body">
-        <div class="tasks" data-tasks></div>
+                    <a href="./meditation.html" class="redirect meditation">
+                        <img src="/images/meditation.png" alt="">
+                        <h2>Meditation</h2>
+                    </a>
 
-        <div class="new-task-creator">
-            <form action="" data-new-task-form>
-                <input 
-                  type="text"
-                  data-new-task-input
-                  class="new task"
-                  placeholder="new task name"
-                  aria-label="new task name"
-                />
-                <button class="btn create" aria-label="create new task">+</button>
-              </form>
-        </div>
+                    <a href="./pomodoro.html" class="redirect meditation">
+                        <img src="/images/timer.png" alt="">
+                        <h2>Pomodoro Timer</h2>
+                    </a>
+                </div>
 
-        <div class="delete-stuff">
-          <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
-          <button class="btn delete" data-delete-list-button>Delete list</button>
-        </div>
-      </div>
-    </div>
+                <div class="end-quote">
+                    <h2>Your Health Matters.</h2>
+                    <img src="/images/mental-health.png" alt="">
+                </div>
+
+            </div>
+            
+        
+
+        </section>
+    </main>
+
+    <div class="obj1"> </div>
+    <div class="obj2"></div>
+
+</body>
 
    
     </div>
