@@ -1,8 +1,7 @@
-# HackTheChange21
 <img width="1422" alt="Screen Shot 2022-02-27 at 10 27 12 PM" src="https://user-images.githubusercontent.com/80851741/155929046-b14e04ff-eca8-4a1e-9d1e-86150b0f0b2f.png">
 
-
 👋 Welcome to "happier2day", a health and wellness hub created in a 24 hr timeframe with HTML, CSS, & JavaScript.
+__________________________
 
 **happier2day Includes:**
   - An interactive to-do list, where users can make multiple lists and add/cross items as per needed.
