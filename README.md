@@ -1,17 +1,12 @@
 <img width="1422" alt="Screen Shot 2022-02-27 at 10 27 12 PM" src="https://user-images.githubusercontent.com/80851741/155929046-b14e04ff-eca8-4a1e-9d1e-86150b0f0b2f.png">
 
-👋 Welcome to "happier2day", a health and wellness hub created in a 24 hr timeframe with HTML, CSS, & JavaScript.
+👋🏽 Welcome to "happier2day", a health and wellness web hub created in a 24 hour timeframe.
 __________________________
 
-**happier2day Includes:**
+## Overview
   - An interactive to-do list, where users can make multiple lists and add/cross items as per needed.
   - A mediation page that allows the users to pick their meditation time & mood. A sound is integrated with every mood to enhance the meditation experience.
   - A minimalistic pomodoro page for an effective study session.  For each (30 min) session, a sound will be played at the 5 min mark to alert the user that the 5 min break has started.
-
-**What We Learnt**
-  - Web development basics.
-  - Mobile responsive design with CSS.
-  - User interactivity with Javascript.
 
 **Homepage**
 
@@ -28,3 +23,8 @@ __________________________
 **Pomodoro Session**
 
 <img width="1414" alt="Screen Shot 2022-02-27 at 9 19 54 PM" src="https://user-images.githubusercontent.com/80851741/155923619-975f896b-34e5-43d7-a3b7-ef1a216f338e.png">
+
+## What We Learnt
+  - Web development basics & fundamentals with HTML, CSS, & CSS
+  - Mobile responsive design with CSS.
+  - User interactivity with Javascript.
